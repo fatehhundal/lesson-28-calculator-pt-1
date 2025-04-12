@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Query</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                background-color: #1f1f1f;
+                padding: 40px;
+            }
+
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+
+            .main {
+                flex: 2;
+                background-color: #fff59c;
+            }
+
+            .sidebar {
+                flex: 1;
+                background-color: #ffffff;
+            }
+
+            header {
+                margin-bottom: 20px;
+                background-color: yellow;
+                text-align: center;
+            }
+
+            .main, .sidebar, header {
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            /* Tablet (≤ 768px) */
+            @media (max-width: 768px) {
+                body {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+
+                .container {
+                    flex-direction: column;
+                }
+
+                .sidebar {
+                    margin-top: 20px;
+                }
+
+            }
+
+            /* Mobile Phones (480px) */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 14px;
+                    padding: 10px;
+                    background-color: yellow;
+                }
+
+                header {
+                    font-size: 20px;
+                    background-color: #1f1f1f;
+                    color: white;
+                }
+
+                .main {
+                    background-color: rgb(79, 79, 79);
+                    color: white;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Responsive Layout with Media Queries</h1>
+        </header>
+
+        <div class="container">
+            <div class="main">
+                <h2>Main Content</h2>
+                <p>This section will be spread out on wider screens and stacked on smaller screens</p>
+            </div>
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This section will sit next to the main content on wider screens, and sit below the main content on smaller screens</p>
+            </div>
+        </div>
+    </body>
+</html>
