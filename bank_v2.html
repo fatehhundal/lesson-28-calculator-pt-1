@@ -18,5 +18,10 @@
             </form>
             <p id="amount"></p>
         </div>
+
+        <script>
+            var account_balance = parseInt(current_balance_el.innerText) + parseInt(entered_amount_el);
+            current_balance_el.innerText = parseInt(account_balance);
+        </script>
     </body>
 </html>
